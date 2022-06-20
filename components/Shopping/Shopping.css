@@ -30,3 +30,11 @@
 	background-size: contain;
 	cursor: pointer;
 }
+
+.shopping-element__btn{
+	background-color: tomato;
+	color: #fff;
+	border-radius: 8px;
+	padding: 0 10px;
+	cursor: pointer;
+}

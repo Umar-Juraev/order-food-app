@@ -3,6 +3,15 @@ class Shopping {
         ROOT_SHOPPING.innerHTML = '';
     }
 
+
+    handleDelete(element, id) {
+        const { pushProducts, products } = localStorageUtil.putProducts(id)
+        this.render();
+        headerPage.render(products.length)
+        productsPage.render()
+    }
+
+
     render() {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = '';
@@ -14,6 +23,7 @@ class Shopping {
                     <tr>
                         <td class="shopping-element__name">⚡️ ${name}</td>
                     <td class="shopping-element__price">${price.toLocaleString()} so'm</td>
+                    <td  class="shopping-element__btn" onclick="shoppingPage.handleDelete(this,'${id}')" >remove</td>
                     </tr>
                 `;
                 sumCatalog += price;
@@ -33,7 +43,7 @@ class Shopping {
             </div>
         `;
 
-        ROOT_SHOPPING.innerHTML = html;  
+        ROOT_SHOPPING.innerHTML = html;
     }
 };
 
