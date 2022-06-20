@@ -7,7 +7,8 @@ class Header {
     const html = `
             <div class="header-container">
                 <div class="header-counter" onclick="headerPage.handlerOpenShoppingPage();">
-                    <img width="25"  src="../../img/wishlist.png" /> ${count > 0 ? `<span class="header-count">${count}</span>`  : ''}
+                
+                    <img src="./backet.png" alt="basket"  width="25"  /> ${count > 0 ? `<span class="header-count">${count}</span>` : ''}
                 </div>
             </div>
         `;

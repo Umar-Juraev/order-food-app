@@ -4,8 +4,8 @@ class Shopping {
     }
 
 
-    handleDelete(element, id) {
-        const { pushProducts, products } = localStorageUtil.putProducts(id)
+    handleDelete(id) {
+        const { products } = localStorageUtil.putProducts(id)
         this.render();
         headerPage.render(products.length)
         productsPage.render()
@@ -23,7 +23,7 @@ class Shopping {
                     <tr>
                         <td class="shopping-element__name">⚡️ ${name}</td>
                     <td class="shopping-element__price">${price.toLocaleString()} so'm</td>
-                    <td  class="shopping-element__btn" onclick="shoppingPage.handleDelete(this,'${id}')" >remove</td>
+                    <td  class="shopping-element__btn" onclick="shoppingPage.handleDelete('${id}')" >remove</td>
                     </tr>
                 `;
                 sumCatalog += price;
