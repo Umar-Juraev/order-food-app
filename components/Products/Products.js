@@ -55,6 +55,9 @@ class Products {
         `;
 
         ROOT_PRODUCTS.innerHTML = html;
+        
+
+        console.log(CATALOG);
     }
 };
 
